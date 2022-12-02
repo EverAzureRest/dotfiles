@@ -63,7 +63,7 @@ font-3 = RobotoMono Nerd Font:pixelsize=14;1
 font-4 = SauceCodePro Nerd Font Mono:style=Regular:size=14
 font-5 = MesloLGS NF Mono:pixelsize=18
 
-modules-left = i3 updates weather bitcoin monero msftticker
+modules-left = i3 updates weather bitcoin monero stockticker
 modules-center = mpd
 modules-right = pulseaudio filesystem memory cpu wlan eth battery date
 
@@ -259,18 +259,6 @@ interval = 300
 label = $%output%
 label-font = 5
 
-[module/etherium]
-type = custom/script
-exec = ~/scripts/ethticker.sh
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-format = <label>
-tail = true
-interval = 300
-
-label = $%output%
-label-font = 5
-
 [module/monero]
 type = custom/script
 exec = ~/scripts/xmrticker.sh
@@ -283,19 +271,7 @@ interval = 300
 label = %output%
 label-font = 5
 
-[module/doge]
-type = custom/script
-exec = ~/scripts/dogeticker.sh
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-format = <label>
-tail = true
-interval = 300
-
-label = $0.%output%
-label-font = 5
-
-[module/msftticker]
+[module/stockticker]
 type = custom/script
 exec = ~/scripts/stockticker.sh MSFT
 format-prefix = " "
