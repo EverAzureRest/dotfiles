@@ -19,6 +19,8 @@ USD Stock price quote
 ## Custom Script Requirements
 
 [yfinance](https://pypi.org/project/yfinance/)  
-jq
+[jq](https://stedolan.github.io/jq/)  
+[FontAwesome](https://fontawesome.com/)  
+[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
 stockticker.sh calls ticker.py and returns market price.  Just pass in the symbol as the first argument
