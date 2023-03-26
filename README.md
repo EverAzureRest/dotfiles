@@ -9,7 +9,7 @@ Taskbar - [Polybar](https://github.com/polybar/polybar)
 Shell - [zsh](https://zsh.sourceforge.io/)  
 Terminal - [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/preferences.html)  
 [OhMyZsh](https://ohmyz.sh/)  
-Zsh Theme - [powerleve10k](https://github.com/romkatv/powerlevel10k)  
+Zsh Theme - [powerlevel10k](https://github.com/romkatv/powerlevel10k)  
 Music Player Daemon - [mopidy](https://mopidy.com/)  
 Music Player Client - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
 

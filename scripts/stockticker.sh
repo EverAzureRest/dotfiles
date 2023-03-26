@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python ~/scripts/ticker.py $1 | jq '.regularMarketPrice'
+python ~/scripts/ticker.py $1 
