@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python ~/scripts/ticker.py $1 
+python ~/scripts/ticker.py $1 | jq '.currentPrice'

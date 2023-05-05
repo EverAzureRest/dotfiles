@@ -1,12 +1,12 @@
 import sys
 import yfinance as yf
-
+import json
 
 symbol = str(sys.argv[1])
 
 stock = yf.Ticker(symbol)
 
-price = int(stock.fast_info.last_price)
+raw = json.dumps(stock.info)
 
-print(price)
+print(raw)
 
