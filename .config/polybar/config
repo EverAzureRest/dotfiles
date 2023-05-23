@@ -63,7 +63,7 @@ font-3 = RobotoMono Nerd Font:pixelsize=14;1
 font-4 = SauceCodePro Nerd Font Mono:style=Regular:size=14
 font-5 = MesloLGS NF Mono:pixelsize=18
 
-modules-left = i3 updates weather bitcoin monero stockticker
+modules-left = i3 updates weather bitcoin monero msftticker gold
 modules-center = mpd
 modules-right = pulseaudio filesystem memory cpu wlan eth battery date
 
@@ -237,7 +237,7 @@ label-font = 5
 
 [module/weather]
 type = custom/script
-exec = ~/scripts/weather.sh
+exec = ~/scripts/conky/weather.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.background-alt}
 format = <label>
@@ -249,8 +249,20 @@ label-font = 5
 
 [module/bitcoin]
 type = custom/script
-exec = ~/scripts/btcticker.sh
+exec = ~/scripts/conky/btcticker.sh
 format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format = <label>
+tail = true
+interval = 300
+
+label = $%output%
+label-font = 5
+
+[module/etherium]
+type = custom/script
+exec = ~/scripts/conky/ethticker.sh
+format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 format = <label>
 tail = true
@@ -261,7 +273,7 @@ label-font = 5
 
 [module/monero]
 type = custom/script
-exec = ~/scripts/xmrticker.sh
+exec = ~/scripts/conky/xmrticker.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-secondary}
 format = <label>
@@ -271,11 +283,36 @@ interval = 300
 label = %output%
 label-font = 5
 
-[module/stockticker]
+[module/doge]
+type = custom/script
+exec = ~/scripts/conky/dogeticker.sh
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format = <label>
+tail = true
+interval = 300
+
+label = $0.%output%
+label-font = 5
+
+[module/msftticker]
 type = custom/script
 exec = ~/scripts/stockticker.sh MSFT
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
+format = <label>
+tail = false
+interval = 3600
+
+label = $%output%
+label-font = 5
+
+[module/gold]
+type = custom/script
+exec = ~/scripts/goldticker.sh GC=F
+format-prefix-font = 1
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
 format = <label>
 tail = false
 interval = 3600
